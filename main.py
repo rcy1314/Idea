@@ -46,11 +46,11 @@ def bl_update(mid):
 
 
 def bl_clean(repo):
-    url = 'https://api.github.com/repo/' + str(repo) + '/contents/source/_posts'
+    url = 'https://api.github.com/repos/' + str(repo) + '/contents/source/_posts'
     response = requests.get(url)
     data = response.json()
     for i in range(len(data)):
-        with open('source/_posts/' + str(data[i]['name']), 'w', encoding='UTF-8') as fp:
+   
             fp.write('---')
             fp.write('\n')
             fp.write('hidden: true')
@@ -58,5 +58,5 @@ def bl_clean(repo):
             fp.write('---')
 
 
-bl_clean(repo)
+
 bl_update(mid)
