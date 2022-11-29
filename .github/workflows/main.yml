@@ -28,10 +28,9 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     strategy:
-      - name: Setup Node.js 12.x
-        uses: actions/setup-node@main
-        with:
-          node-version: "18.4.0"
+      matrix:
+        os: ubuntu-18.04
+        node_version: 16.x
 
     steps:
       - name: Checkout
