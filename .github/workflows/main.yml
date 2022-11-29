@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: ${{ env.GIT_DEPLOY_REPO }}
-          ref: ${{ env.GIT_DEPLOY_BRANCH }}
+          ref: ${{ secrets.HEXOKEY }}
           path: .deploy_git
           persist-credentials: false
           
