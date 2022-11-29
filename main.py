@@ -46,7 +46,7 @@ def bl_update(mid):
 
 
 def bl_clean(repo):
-    url = 'https://api.github.com/repos/' + str(repo) + '/contents/source/_posts'
+    url = 'https://api.github.com/repo/' + str(repo) + '/contents/source/_posts'
     response = requests.get(url)
     data = response.json()
     for i in range(len(data)):
