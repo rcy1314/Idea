@@ -23,15 +23,20 @@ env:
   # 哔哩哔哩专栏id
   BILIBILI_MID: 13950193
 jobs:
-  build:
-    name: Build on node ${{ matrix.node_version }} and ${{ matrix.os }}
-    runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
-    strategy:
-      matrix:
-        os: ubuntu-18.04
-        node_version: 16.x
-
+  build: 
+    runs-on: ubuntu-latest 
+        
+    steps:
+    # check it to your workflow can access it
+    # from: https://github.com/actions/checkout
+    - name: Checkout Repository master branch
+      uses: actions/checkout@master 
+      
+    # from: https://github.com/actions/setup-node  
+    - name: Setup Node.js 12.x 
+      uses: actions/setup-node@master
+      with:
+        node-version: "12.x"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
