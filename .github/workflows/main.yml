@@ -72,12 +72,9 @@ jobs:
           npm install
           npm uninstall hexo-generator-index --save
           npm install hexo-baidu-url-submit hexo-generator-index2 hexo-symbols-count-time hexo-blog-encrypt hexo-deployer-git --save
-      name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        personal_token: ${{ secrets.PERSONAL_TOKEN }}
-        external_repository: marwincn/marwincn.github.io
-        publish_branch: main
-        publish_dir: ./public
-        cname: marwin.cn
-        commit_message: ${{ github.event.head_commit.message }}
+      - name: Deploy hexo
+        run: |
+          npm remove hexo-baidu-url-submit
+          hexo clean
+          hexo g
+          hexo d
