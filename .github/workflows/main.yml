@@ -24,7 +24,11 @@ env:
   BILIBILI_MID: 13950193
 jobs:
   build:
-   - name: Setup Node.js 12.x
+    name: Build on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    strategy:
+      - name: Setup Node.js 12.x
         uses: actions/setup-node@main
         with:
           node-version: "18.4.0"
