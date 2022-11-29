@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Idea-Pen
+title: Idea
 subtitle: "随记"
 description: "念念不忘，必有回响"
 keywords:
@@ -13,7 +13,7 @@ timezone: ""
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://rcy1314.github.io/Idea-pen
+url: https://rcy1314.github.io/Idea
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -103,7 +103,7 @@ theme: lightime
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: "git"
-  repo: https://github.com/rcy1314/Idea-pen
+  repo: https://github.com/rcy1314/Idea
   branch: gh_page
 
 # 隐藏文章使用 hexo-hide-posts

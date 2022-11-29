@@ -15,11 +15,11 @@ env:
   # Hexo 编译后使用此 git 邮箱部署到 github 仓库
   GIT_EMAIL: 1129159201@qq.com
   # Hexo 编译后要部署的 github 仓库
-  GIT_DEPLOY_REPO: rcy1314/Idea-pen
+  GIT_DEPLOY_REPO: rcy1314/Idea
   # Hexo 编译后要部署到的分支
   GIT_DEPLOY_BRANCH: gh_page
   # 注意替换为你的 GitHub 源仓库地址
-  GIT_SOURCE_REPO: git@github.com:rcy1314/Idea-pen.git
+  GIT_SOURCE_REPO: git@github.com:rcy1314/Idea.git
   # 哔哩哔哩专栏id
   BILIBILI_MID: 13950193
 jobs:
