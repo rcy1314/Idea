@@ -47,7 +47,7 @@ jobs:
           git push origin main
           
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           repository: ${{ env.GIT_DEPLOY_REPO }}
           ref: ${{ env.GIT_DEPLOY_BRANCH }}
