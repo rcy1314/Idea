@@ -49,9 +49,9 @@ jobs:
       - name: Checkout deploy repo
         uses: actions/checkout@v3
         with:
-          repository: 'https://github.com/rcy1314/Idea.git'
-          ref: 'https://github.com/rcy1314/Idea.git'
-          path: "~/.deploy_git"
+          repository: ${{ env.GIT_DEPLOY_REPO }}
+          ref: ${{ env.GIT_DEPLOY_BRANCH }}
+          path: ./public
 
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v2
