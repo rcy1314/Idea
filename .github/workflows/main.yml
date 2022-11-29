@@ -49,12 +49,18 @@ jobs:
       - name: Checkout deploy repo
         uses: actions/checkout@v3
         with:
-        
+        # 令 GitHub 在 git clone 和 git checkout 后「忘记」使用的 credentials。
+        # 如果之后需要以另外的身份（如你的 GitHub Bot）执行 git push 操作时（如部署到 GitHub Pages），必须设置为 false。
+        # persist-credentials: false
+        # 拉取子模块(但是其HEAD是与repo里记录的一致,并非最新)
+          submodules: true
           path: .deploy_git
           persist-credentials: false
-          
+            # 将子模块更新到最新
+      - name: Update submodule
+        run: git submodule update --remote    
       - name: Use Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node_version }}
 
@@ -71,16 +77,17 @@ jobs:
           ssh-keyscan -t rsa gitee.com >> ~/.ssh/known_hosts
           git config --global user.name 'rcy1314'
           git config --global user.email '1129159201@qq.com'
-      - name: Install dependencies
-        run: |
-          npm install hexo-cli -g
-          npm install
-          npm uninstall hexo-generator-index --save
-          npm install hexo-baidu-url-submit hexo-generator-index2 hexo-symbols-count-time hexo-blog-encrypt hexo-deployer-git --save
-      - name: Deploy
-       
-         run: |
-          npm remove hexo-baidu-url-submit
-          hexo clean
-          hexo g
+      - name: Cache node_modules
+      uses: actions/cache@v1 # 使用 GitHub 官方的缓存 Action。
+      env:
+        cache-name: hexo-node-modules
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
+      - run: npm i
+      - run: npm run build
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
           
