@@ -17,7 +17,7 @@ env:
   # Hexo 编译后要部署的 github 仓库
   GIT_DEPLOY_REPO: rcy1314/Idea
   # Hexo 编译后要部署到的分支
-  GIT_DEPLOY_BRANCH: gh_page
+  GIT_DEPLOY_BRANCH: main
   # 注意替换为你的 GitHub 源仓库地址
   GIT_SOURCE_REPO: git@github.com:rcy1314/Idea.git
   # 哔哩哔哩专栏id
@@ -46,12 +46,7 @@ jobs:
           git commit -m 'Bilibili_update'
           git push origin main
           
-      - name: Checkout deploy repo
-        uses: actions/checkout@v3
-        with:
-          repository: ${{ env.GIT_DEPLOY_REPO }}
-          ref: ${{ env.GIT_DEPLOY_BRANCH }}
-          path: /posts
+
 
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v2

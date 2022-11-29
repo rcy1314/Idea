@@ -104,7 +104,7 @@ theme: lightime
 deploy:
   type: "git"
   repo: https://github.com/rcy1314/Idea
-  branch: gh_page
+  branch: main
 
 # 隐藏文章使用 hexo-hide-posts
 hide_posts:
