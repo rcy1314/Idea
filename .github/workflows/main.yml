@@ -49,9 +49,8 @@ jobs:
       - name: Checkout deploy repo
         uses: actions/checkout@v3
         with:
-          repository: ${{ secrets.HEXOKEY }}
-          ref: ${{ secrets.HEXOKEY }}
-         
+        
+          path: .deploy_git
           persist-credentials: false
           
       - name: Use Node.js ${{ matrix.node_version }}
