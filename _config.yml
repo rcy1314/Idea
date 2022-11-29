@@ -103,7 +103,7 @@ theme: lightime
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: "git"
-  repo: https://github.com/rcy1314/Idea-pen.git
+  repo: https://rcy1314.github.io/Idea-pen
   branch: gh_page
 
 # 隐藏文章使用 hexo-hide-posts
