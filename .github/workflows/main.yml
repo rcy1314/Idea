@@ -51,7 +51,7 @@ jobs:
         with:
           repository: ${{ env.GIT_DEPLOY_REPO }}
           ref: ${{ secrets.HEXOKEY }}
-          path: .deploy_git
+         
           persist-credentials: false
           
       - name: Use Node.js ${{ matrix.node_version }}
