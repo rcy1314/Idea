@@ -51,7 +51,7 @@ jobs:
         with:
           repository: ${{ env.GIT_DEPLOY_REPO }}
           ref: ${{ env.GIT_DEPLOY_BRANCH }}
-          path: ./public
+          path: /posts
 
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v2
