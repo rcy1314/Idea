@@ -46,10 +46,12 @@ jobs:
           git commit -m 'Bilibili_update'
           git push origin main
           
-     - name: Checkout
-        uses: actions/checkout@main
+      - name: Checkout deploy repo
+        uses: actions/checkout@v3
         with:
-          persist-credentials: false
+          repository: ${{ env.GIT_DEPLOY_REPO }}
+          ref: ${{ env.GIT_DEPLOY_BRANCH }}
+          path: .deploy_git
 
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v2
