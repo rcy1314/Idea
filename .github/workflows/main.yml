@@ -17,7 +17,7 @@ env:
   # Hexo 编译后要部署的 github 仓库
   GIT_DEPLOY_REPO: rcy1314/Idea
   # Hexo 编译后要部署到的分支
-  GIT_DEPLOY_BRANCH: gh_page
+  GIT_DEPLOY_BRANCH: gh-pages
   # 注意替换为你的 GitHub 源仓库地址
   GIT_SOURCE_REPO: git@github.com:rcy1314/Idea.git
   # 哔哩哔哩专栏id
@@ -84,10 +84,9 @@ jobs:
           npm uninstall hexo-generator-index --save
           npm install hexo-baidu-url-submit hexo-generator-index2 hexo-symbols-count-time hexo-blog-encrypt hexo-deployer-git --save
       - name: Deploy
-        uses: theme-keep/hexo-deploy-github-pages-action@master
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-           BRANCH: gh-pages
       
       
