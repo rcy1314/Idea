@@ -64,30 +64,31 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
 
-      
-      
-       - name: Setup Node            # 安装 Node 环境
-      uses: actions/setup-node@v1
-      with:
-        node-version: "12.x"
+      - name: Configuration environment
+        env:
+          HEXO_DEPLOY_PRI: ${{secrets.HEXO_DEPLOY_PRI}}
+        run: |
+          sudo timedatectl set-timezone "Asia/Shanghai"
+          mkdir -p ~/.ssh/
+          echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+          ssh-keyscan -t rsa e.coding.net >> ~/.ssh/known_hosts
+          ssh-keyscan -t rsa gitee.com >> ~/.ssh/known_hosts
+          git config --global user.name 'rcy1314'
+          git config --global user.email '1129159201@qq.com'
+      - name: Install dependencies
+        run: |
+          npm install hexo-cli -g
+          npm install
+          npm uninstall hexo-generator-index --save
+          npm install hexo-baidu-url-submit hexo-generator-index2 hexo-symbols-count-time hexo-blog-encrypt hexo-deployer-git --save
+      - name: Deploy
+        uses: theme-keep/hexo-deploy-github-pages-action@master
+         env:
+         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_REPOSITORY: ./public
+          BRANCH: gh_page
 
-    - name: Hexo Generate         # 安装 Hexo 依赖并且生成静态文件
-      run: |
-        rm -f .yarnclean
-        yarn --frozen-lockfile --ignore-engines --ignore-optional --non-interactive --silent --ignore-scripts --production=false
-        rm -rf ./public
-        yarn run hexo clean
-        yarn run hexo generate
-    - name: Hexo Deploy           # 部署步骤，这里以 hexo deploy 为例
-      env:
-        SSH_PRIVATE: ${{ secrets.HEXO_DEPLOY_PRI }}
-        GIT_NAME: rcy1314
-        GIT_EMAIL: 1129159201@qq.com
-      run: |
-        mkdir -p ~/.ssh/
-        echo "$SSH_PRIVATE" | tr -d '\r' > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan github.com >> ~/.ssh/known_hosts
-        git config --global user.name "$GIT_NAME"
-        git config --global user.email "$GIT_EMAIL"
-        yarn run hexo deploy
+      
+      
