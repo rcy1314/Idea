@@ -49,7 +49,7 @@ jobs:
       - name: Checkout deploy repo
         uses: actions/checkout@v3
         with:
-          repository: ${{ env.GIT_DEPLOY_REPO }}
+          repository: ${{ secrets.HEXOKEY }}
           ref: ${{ secrets.HEXOKEY }}
          
           persist-credentials: false
