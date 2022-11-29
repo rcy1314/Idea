@@ -72,10 +72,8 @@ jobs:
           npm install
           npm uninstall hexo-generator-index --save
           npm install hexo-baidu-url-submit hexo-generator-index2 hexo-symbols-count-time hexo-blog-encrypt hexo-deployer-git --save
-      - name: Deploy and Build Image
-        run: |
-          hexo clean
-          hexo deploy
-          ls -la
-        
-        
+     - name: Deploy Hexo 
+      run: |
+        hexo clean
+        hexo generate 
+        hexo deploy
