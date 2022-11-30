@@ -19,10 +19,10 @@ sidebar:
     avatar: 'https://cdn.staticaly.com/gh/rcy1314/tuchuang@main/NV/favicon.5m81u62g99g0.jpg' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
     title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
   menu:
-     post: '[btn.blog](/)'
-     wiki: '[btn.wiki](/wiki/)'
-    friends: '[友链](/friends/)'
-     about: '[关于](/about/)'
+     文章: '/'
+     wiki: '/wiki/'
+     友链: '/friends/'
+     关于: '/about/'
   # Sidebar widgets
   widgets:
     #### 自动生成的页面 ####
