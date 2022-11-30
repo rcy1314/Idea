@@ -7,3 +7,20 @@ Notes:
   sections:
     'Hexo笔记': [100, 199]
     '游戏': [200, 299]
+
+Stellar:
+  name: plan
+  title: 近期需要完善的规划
+  subtitle: '按计划行事'
+  tags: 计划
+  cover: true
+  logo:
+    src: https://cdn.staticaly.com/gh/rcy1314/tuchuang@main/NV/xxx.56fpt04w5800.jpg
+    small: 112px
+    large: 240px
+  description: 这是正在完善施工的规划页
+  repo: rcy1314/Idea
+  comment_title: '评论区仅供交流，有问题请提反馈。'
+  beaudar:
+    repo: rcy1314/Idea
+    'issue-term': 'Q & A'
