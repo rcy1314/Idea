@@ -1,0 +1,23 @@
+<% if (page.tocbot) { %>
+<div class="widget-wrap" id="menu-wrap" style="display: none;">
+    <h3 class="widget-title">目录</h3>
+    <div class="menu-box">
+        <div class="widget" id="menu"></div>
+    </div>
+</div>
+<link rel="stylesheet" href="https://lib.baomitu.com/tocbot/4.13.0/tocbot.min.css">
+<script src="https://lib.baomitu.com/tocbot/4.13.0/tocbot.min.js"></script>
+<script>
+  tocbot.init({
+    tocSelector: '#menu',
+    contentSelector: '.e-content',
+    headingSelector: 'h2, h3, h4',
+    hasInnerContainers: false,
+  });
+  if (document.querySelector('#menu').innerHTML !== '' &&
+    window.matchMedia('(min-width: 768px)').matches) {
+    document.querySelector('#menu-wrap').style.display = 'block';
+  }
+</script>
+<%- js('js/toc-phone') %>
+<% } %>

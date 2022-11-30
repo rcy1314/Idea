@@ -1,0 +1,61 @@
+# Header
+menu:
+  主页: /
+  标签: /tags
+  微博: /microblog
+  归档: /archives
+  关于: /about
+  友情链接: /friends
+
+
+# Content
+article_info: true
+excerpt_link: 阅读全文
+fancybox: true
+
+# Sidebar
+widgets:
+- oneword
+- category
+# - tag
+# - tagcloud
+# - archive
+# - recent_posts
+# - about
+- tocbot # you need also write "tocbot: true" in your post or page
+- nav-widget
+
+# Widget behavior
+archive_type: 'monthly'
+show_count: true
+recent_posts_limits: 5
+
+# Miscellaneous
+favicon: /favicon.png
+twitter:
+fb_admins:
+fb_app_id:
+
+# valine comment system. https://valine.js.org
+valine:
+  enable: false # if you want use valine,please set this value is true
+  appId:  
+  appKey:  
+  pageSize: 10 # comment list page size
+  avatar: robohash # gravatar style https://valine.js.org/#/avatar
+  placeholder: 快来留下评论吧～ # valine comment input placeholder(like: Please leave your footprints )
+  recentNum: 3 # 在首页显示多少条最新评论,0 表示不开启该功能
+  visitor: true # 是否开启文章计数
+  
+# mathjax: enable you to use TeX commands
+mathjax:  #you need also write "mathjax: true" in your post or page
+  enable: true
+
+# mermaid chart, you need also write "mermaid: true" in your post or page
+mermaid: ## mermaid url https://github.com/knsv/mermaid
+  enable: true  # default true
+
+copyright:
+  enable: true
+  minCharNumber: 120 # 至少复制多少个字符就追加版权信息.
+  description: 本文章著作权归作者所有，任何形式的转载都请注明出处。

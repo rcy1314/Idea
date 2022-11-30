@@ -1,0 +1,26 @@
+<% if (is_page() == 0){ %>
+  <%- partial('_partial/article', {post: page, index: false}) %>
+<% } %>
+<% if (is_page() && page.type === 'about'){ %>
+  <%- partial('_partial/article', {post: page, index: false}) %>
+<% } %>
+<% if (is_page() && page.type === 'changelog'){ %>
+  <%- partial('_partial/article', {post: page, index: false}) %>
+<% } %>
+<% if (is_page() && page.type === 'tags'){ %>
+  <%- partial('_partial/tags', {post: page, index: false}) %>
+<% } %>
+<% if (is_page() && page.type === 'friends'){ %>
+  <%- partial('_partial/friends', {post: page, index: false}) %>
+<% } %>
+<% if (is_page() && page.type === 'microblog'){ %>
+  <%- partial('_partial/article', {post: page, index: false}) %>
+  <script>
+    const comments = document.querySelector('#comments');
+    const head = document.querySelector('.article-title');
+    comments.classList.add('microblog');
+    head.onclick = function () {
+      comments.classList.toggle('microblog');
+    }
+  </script>
+<% } %>

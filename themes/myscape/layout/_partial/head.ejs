@@ -1,0 +1,61 @@
+<head>
+  <meta charset="utf-8">
+  <%- js('js/dark_theme') %>
+  <% if (is_home() || theme.mathjax.enable && page.mathjax) { %>
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+      processEscapes: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  };
+  </script>
+  <script src="https://lib.baomitu.com/mathjax/3.1.2/es5/tex-mml-chtml.min.js" async=""></script>
+  <% } %>
+  <% if (theme.copyright.enable) { %>
+  <script>
+    window.copyright = {
+      min: '<%- theme.copyright.minCharNumber %>',
+      title: '<%= config.title %>',
+      author: '<%= config.author %>',
+      description: '<%- theme.copyright.description %>'
+    }
+  </script>
+  <% } %>
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = __('archive_a');
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('category') + ': ' + page.category;
+  } else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta itemprop="image" content="<%- url_for('/share-preview.png') %>">
+  <%- open_graph({twitter_id: theme.twitter, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+  <% if (config.feed) { %>
+  <%- feed_tag() %>
+  <% } else if (theme.rss) { %>
+  <%- feed_tag(theme.rss) %>
+  <% } %>
+  <% if (theme.favicon){ %>
+  <%- favicon_tag(theme.favicon) %>
+  <% } %>
+  <%- css('css/style') %>
+  <% if (theme.fancybox){ %>
+  <%- css('fancybox/jquery.fancybox.min.css') %>
+  <% } %>
+</head>

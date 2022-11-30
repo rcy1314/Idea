@@ -21,14 +21,12 @@ pretty_urls:
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
-source_dir: source
-public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-i18n_dir: :lang
-skip_render:
+  主页: /
+  标签: /tags
+  微博: /microblog
+  归档: /archives
+  关于: /about
+  友情链接: /friends
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -97,7 +95,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: maple
+theme: myscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -124,3 +122,12 @@ feed:
   type: atom
   path: blread/atom.xml
   limit: 20
+
+ # giscus
+giscus:
+  enable: 1
+  repo: rcy1314/Idea
+  repo_id: R_kgDOIhgfQA
+  category: General
+  category_id: DIC_kwDOIhgfQM4CS1EL
+  mapping: pathname

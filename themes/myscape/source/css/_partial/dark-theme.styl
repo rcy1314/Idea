@@ -1,0 +1,80 @@
+// Colors
+DM-grey = #212121
+DM-black = #191919
+DM-font-color = #aaa
+
+.dark-theme
+    body,#wrap
+        background-color: DM-black
+    .widget
+        background-color: DM-grey
+        box-shadow: none
+        color: DM-font-color
+        border: 0
+        a
+            color: DM-font-color
+    .oneword-refresh
+        background-color: DM-black
+        color: DM-font-color
+    #dark-btn,#go-page-front,#menu-nav
+        background-color: #252525
+        color: DM-font-color
+    #dark-btn
+        padding: 12px 15px
+        &:before
+            content: '\f186'
+    .widget-title,.article-category,.article-date,.article-category-link
+        text-shadow: none
+        color: DM-font-color !important
+    .article-inner,.archive-article-inner,#page-nav
+        background-color: DM-grey
+        box-shadow: none
+        color: DM-font-color
+        .tags a
+            color: DM-font-color
+        .friend-all a
+            color: DM-font-color
+        .friend-card
+            border: thin solid DM-font-color
+            &:hover
+                background-color: #353535
+        .current
+            color: #ccc
+    .article-title,.archive-article-title
+        color: DM-font-color
+    .article-entry
+        color: DM-font-color
+        code,.tip
+            background-color: #353535
+        .code-area
+            &:before
+                background-color: #353535
+    #comments
+        box-shadow: none
+        border: 0
+        background-color: DM-grey
+    .v
+        pre
+            code
+                color: DM-font-color
+        pre,code
+            background-color: #353535;
+        .vat
+            color: DM-font-color
+        .vwrap .vinput
+            color: DM-font-color
+    .vcard .vh
+        border-bottom: 1px dashed #fff
+    #banner
+        background: url("images/banner-dark.jpg") center #000
+        background-size: cover
+    #footer
+        background: #252525
+    .local-search-popup
+        box-shadow: none
+        background: DM-grey
+        line-height: normal
+        a,#no-result,ul.search-result-list
+            color: DM-font-color
+        .search-keyword
+            color: #66ccff

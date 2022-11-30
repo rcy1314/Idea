@@ -1,0 +1,5 @@
+<aside id="sidebar">
+<% theme.widgets.forEach(function(widget){ %><%- partial('_widget/' + widget) %><% }) %>
+<% if (is_home() && theme.valine.enable && theme.valine.recentNum) { %>
+<%- partial('_widget/recent-comment') %> <% } %>
+</aside>
