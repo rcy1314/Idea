@@ -1,357 +1,212 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  
+<script src="/Idea/js/dark_theme.js"></script>
 
-
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <meta name="author" content="NOISE">
-
-
-  <meta name="subtitle" content="NOISE随记">
-
-
-  <meta name="description" content="念念不忘，必有回响">
-
-
-
-<title>Archiv: 2022 | Idea</title>
-
-
-
-<link rel="icon" href="/Idea/favicon.png">
-
-
-
-<link rel="stylesheet" href="/Idea/css/main.css">
-
-
-<link rel="stylesheet" href="/Idea/lib/nprogress/nprogress.css">
-
-
-<link rel="stylesheet" href="/Idea/lib/fancybox/fancybox.min.css">
-
-
-<link rel="stylesheet" href="/Idea/lib/tocbot/tocbot.min.css">
-
-
-
-<script src="/Idea/lib/jquery.min.js"></script>
-
-
-<script src="/Idea/lib/iconify-icon.min.js"></script>
-
-
-<script src="https://cdn.tailwindcss.com?plugins=typography,line-clamp"></script>
-<script>
-  tailwind.config = {
-    darkMode: 'class',
-  }
-</script>
-
-
-<script src="/Idea/lib/nprogress/nprogress.js"></script>
-
-<script>
-  $(document).ready(() => {
-    NProgress.configure({
-      showSpinner: false,
-    });
-    NProgress.start();
-    $("#nprogress .bar").css({
-      background: "#de7441",
-    });
-    $("#nprogress .peg").css({
-      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
-    });
-    $("#nprogress .spinner-icon").css({
-      "border-top-color": "#de7441",
-      "border-left-color": "#de7441",
-    });
-    setTimeout(function () {
-      NProgress.done();
-      $(".fade").removeClass("out");
-    }, 800);
-  });
-</script>
-
-<script>
-  (function () {
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
-    if (setting === "dark" || (prefersDark && setting !== "light"))
-      document.documentElement.classList.toggle("dark", true);
-  })();
-  window.onload = function () {
-    // init iconify icon
-    const isDark = document.documentElement.classList.contains("dark");
-    if (isDark) {
-      $("#toggle-dark").attr("icon", "ri:moon-line");
-    } else {
-      $("#toggle-dark").attr("icon", "ri:sun-line");
+  
+  
+  <script>
+    window.copyright = {
+      min: '120',
+      title: 'Idea',
+      author: 'NOISE',
+      description: '本文章著作权归作者所有，任何形式的转载都请注明出处。'
     }
+  </script>
+  
+  
+  <title>归档: 2022 | Idea</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta itemprop="image" content="/Idea/share-preview.png">
+  <meta name="description" content="念念不忘，必有回响">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Idea">
+<meta property="og:url" content="https://rcy1314.github.io/Idea/archives/2022/index.html">
+<meta property="og:site_name" content="Idea">
+<meta property="og:description" content="念念不忘，必有回响">
+<meta property="og:locale">
+<meta property="article:author" content="NOISE">
+<meta name="twitter:card" content="summary">
+  
+  <link rel="alternate" href="/Idea/blread/atom.xml" title="Idea" type="application/atom+xml">
+  
+  
+  <link rel="shortcut icon" href="/Idea/favicon.png">
+  
+  
+<link rel="stylesheet" href="/Idea/css/style.css">
 
-    const toggleDark = () => {
-      console.log("toggle dark");
-      const darkMode = document.documentElement.classList.toggle("dark");
-      localStorage.setItem("hexo-color-scheme", darkMode ? "dark" : "light");
-      $("#toggle-dark").attr("icon", darkMode ? "ri:moon-line" : "ri:sun-line");
-    };
+  
+  
+<link rel="stylesheet" href="/Idea/fancybox/jquery.fancybox.min.css">
 
-    $("#toggle-dark").click(toggleDark);
-  };
-</script>
+  
+<meta name="generator" content="Hexo 6.1.0"></head>
 
-
-
-
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/Idea/blread/atom.xml" title="Idea" type="application/atom+xml">
-</head>
-<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200">
-  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
-  <div class="max-auto">
-    <nav class="flex items-center text-base">
-      <a href="/Idea/" class="group">
-        <h2 class="font-medium tracking-tighterp text-l p-2">
-          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" src="/images/logo.jpg" alt="Idea" />
-          Idea
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/Idea/" id="logo">Idea</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/Idea/" id="subtitle">NOISE随记</a>
         </h2>
-      </a>
-      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
-        我的个人书写工作流
-      </div>
-      <div class="flex-1"></div>
-      <div class="flex items-center gap-3">
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+        <a class="main-nav-link" href="/Idea/">主页</a>
+        <a class="main-nav-link" href="/Idea/tags">标签</a>
+        <a class="main-nav-link" href="/Idea/microblog">微博</a>
+        <a class="main-nav-link" href="/Idea/archives">归档</a>
+        <a class="main-nav-link" href="/Idea/about">关于</a>
+        <a class="main-nav-link" href="/Idea/friends">友情链接</a>
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/Idea/atom.xml" title="RSS 订阅"></a>
         
         
-          
+          <script>window.localSearchPath = "/~liuly0322/blog/search.xml"</script>
+          <a href="javascript:;" id="nav-search-btn" class="popup-trigger nav-icon"></a>
+          <div class="popup search-popup local-search-popup">
+            <div class="local-search-header clearfix">
+              <span id="nav-inner-icon"></span>
+              <span class="popup-btn-close"></span>
+              <div class="local-search-input-wrapper">
+                <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+              </div>
+            </div>
+            <div id="local-search-result"></div>
+          </div>
         
-        <a class="w-5 h-5" title="toggle theme">
-          <iconify-icon width="20" icon="ri:sun-line" id="toggle-dark"></iconify-icon>
-        </a>
-      </div>
-      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
-        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
-          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
-        </span>
-        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
-          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
-        </span>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
 </header>
-<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
-  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
-    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+
+      <div class="outer">
+        <section id="main">
+  
+  
+    
+    
       
-    </ul>
-  </div>
-  <div class="mask bg-black/20 absolute inset-0"></div>
-</div>
-
-  <main class="p-12">
-    <section class="px-6 max-w-prose mx-auto gap-12 grid grid-cols-1">
-  <div class="flex flex-col h-48 items-center justify-center">
-    <h1 class="site-title text-4xl leading-relaxed">
-      Idea
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/Idea/archives/2022" class="archive-year">2022</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <a href="/Idea/2022/03/11/15605765/" class="archive-article-date">
+  <time class="dt-published" datetime="2022-03-10T16:00:00.000Z" itemprop="datePublished">Mar 11</time>
+</a>
+    <header class="archive-article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/Idea/2022/03/11/15605765/">我的个人书写工作流</a>
     </h1>
-    <p class="text-gray-500 mt-2">
-      NOISE随记
-    </p>
+  
+
+    </header>
   </div>
-  
-  
-    
-    
-      <div class="relative pointer-events-none">
-        <span class="text-9xl opacity-10 absolute -left-11 -top-6 font-bold">2022</span>
-      </div>
-    
-    <a href="/Idea/2022/03/11/15605765/">
-      <header>
-        <h2 class="font-bold text-xl">
-          我的个人书写工作流
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-            &lt;meta name=&#34;referrer&#34; content=&#34;no-referrer&#34; /&gt;
-          
-        </p>
-        <p class="line-clamp-4">
-          Mar 11
-          ·
-          1 min
-        </p>
-      </section>
-    </a>
+</article>
   
     
     
-    <a href="/Idea/2022/03/10/15605153/">
-      <header>
-        <h2 class="font-bold text-xl">
-          创造未来的自动化集成工作流
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-            &lt;meta name=&#34;referrer&#34; content=&#34;no-referrer&#34; /&gt;
-          
-        </p>
-        <p class="line-clamp-4">
-          Mar 10
-          ·
-          1 min
-        </p>
-      </section>
-    </a>
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <a href="/Idea/2022/03/10/15605153/" class="archive-article-date">
+  <time class="dt-published" datetime="2022-03-10T15:02:00.000Z" itemprop="datePublished">Mar 10</time>
+</a>
+    <header class="archive-article-header">
+      
   
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/Idea/2022/03/10/15605153/">创造未来的自动化集成工作流</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
+
+
 </section>
-
-  </main>
-  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
-  <!-- busuanzi -->
-  
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<!-- Busuanzi Analytics -->
-<div class="flex items-center gap-2">
-  <span>Visitor Count</span>
-  <span id="busuanzi_value_site_uv"></span>
-  <span>Totalview</span>
-  <span id="busuanzi_value_site_pv"></span>
+        <aside id="sidebar">
+<div class="widget-wrap">
+  <h3 class="widget-title">一言</h3>
+  <button class="oneword-refresh" onclick="refresh()"></button>
+  <div class="widget">
+    <p id="hitokoto">:D 获取中...</p>
+    <p style="text-align: right">—— 「<span id="from-work">:D 获取中...</span>」</p>
+    <script>
+      if (sessionStorage.getItem("word") !== null && sessionStorage.getItem("word") !== 'undefined'){
+        document.getElementById('hitokoto').innerText = sessionStorage.getItem("word");
+        document.getElementById('from-work').innerText = sessionStorage.getItem("work");
+      }
+    </script>
+  </div>
 </div>
-<!-- End Busuanzi Analytics -->
 
+<button id="dark-btn" onclick="changeDarkTheme()"></button>
+<button id="go-page-front"></button>
 
-  <!-- copyright -->
-  <div class="flex items-center gap-2">
-    <span>© 2022</span>
-    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
-    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 NOISE<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
   </div>
-  <!-- powered by -->
-  <div class="flex items-center gap-2">
-    <span>Powered by</span>
-    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
-    <span>&</span>
-    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
-  </div>
-
 </footer>
 
-  <iconify-icon class="fixed right-4 bottom-10 z-100 opacity-0" width="24" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+    </div>
+    <nav id="mobile-nav">
   
-<script src="/Idea/lib/clipboard.min.js"></script>
+  <a href="/Idea/" class="mobile-nav-link">主页</a>
+  <a href="/Idea/tags" class="mobile-nav-link">标签</a>
+  <a href="/Idea/microblog" class="mobile-nav-link">微博</a>
+  <a href="/Idea/archives" class="mobile-nav-link">归档</a>
+  <a href="/Idea/about" class="mobile-nav-link">关于</a>
+  <a href="/Idea/friends" class="mobile-nav-link">友情链接</a>
+</nav>
+    
+<script src="/Idea/js/jquery-3.4.1.min.js"></script>
+
+
+  
+<script src="/Idea/fancybox/jquery.fancybox.min.js"></script>
 
 
 
-<script src="/Idea/js/main.js"></script>
+<script src="/Idea/js/script.js"></script>
+
+
+<script src="/Idea/js/local-search.js"></script>
 
 
 
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    "HTML-CSS": {
-        preferredFont: "TeX",
-        availableFonts: ["STIX","TeX"],
-        linebreaks: { automatic:true },
-        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
-    },
-    tex2jax: {
-        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
-        processEscapes: true,
-        ignoreClass: "tex2jax_ignore|dno",
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-        equationNumbers: { autoNumber: "AMS" },
-        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-        Macros: { href: "{}" }
-    },
-    messageStyle: "none"
-  });
-</script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
-</script>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>
-  $(document).ready(() => {
-    const maraidConfig = {
-      theme: "dark",
-      logLevel: 3,
-      flowchart: { curve: "linear" },
-      gantt: { axisFormat: "%m/%d/%Y" },
-      sequence: { actorMargin: 50 },
-    };
-    mermaid.initialize(maraidConfig);
-  });
-</script>
-
-
-
-<script src="/Idea/lib/fancybox/fancybox.umd.min.js"></script>
-
-<script>
-  $(document).ready(() => {
-    $('.post-content').each(function(i){
-      $(this).find('img').each(function(){
-        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
-        var alt = this.alt;
-        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
-        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
-      });
-      $(this).find('.fancybox').each(function(){
-        $(this).attr('rel', 'article' + i);
-      });
-    });
-
-    Fancybox.bind('[data-fancybox="gallery"]', {
-        // options
-    })
-  })
-</script>
-
-<!-- tocbot begin -->
-
-<script src="/Idea/lib/tocbot/tocbot.min.js"></script>
-
-<script>
-  $(document).ready(() => {
-      tocbot.init({
-        // Where to render the table of contents.
-        tocSelector: '.post-toc',
-        // Where to grab the headings to build the table of contents.
-        contentSelector: '.post-content',
-        // Which headings to grab inside of the contentSelector element.
-        headingSelector: 'h1, h2, h3',
-        // For headings inside relative or absolute positioned containers within content.
-        hasInnerContainers: true,
-    });
-  })
-</script>
-<!-- tocbot end -->
-
-
+  </div>
 </body>
-
 </html>
