@@ -20,8 +20,8 @@ sidebar:
     title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
   menu:
      post: '[主页](/)'
-     wiki: '[wiki](/wiki/plan)'
-     friends: '[友链](/friends/)'
+   #  wiki: '[wiki](/wiki/plan)'
+   #  friends: '[友链](/friends/)'
   #   about: '[关于](/about/)'
   # Sidebar widgets
   widgets:
