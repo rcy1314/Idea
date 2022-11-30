@@ -3,9 +3,9 @@ related:
 
 welcome:
   layout: markdown
-  title: 欢迎欢迎
+  title: 欢迎访问
   content: |
-    本站是以哔哩哔哩专栏为后端进行创作的项目
+    本站是以哔哩哔哩专栏为后端进行创作的地方，欢迎随时和我讨论
 
 timeline:
   layout: timeline
