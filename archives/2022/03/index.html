@@ -1,144 +1,357 @@
 <!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
 
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="author" content="NOISE">
+
+
+  <meta name="subtitle" content="NOISE随记">
+
 
   <meta name="description" content="念念不忘，必有回响">
 
 
-<link rel="alternate" href="/Idea/atom.xml" title="Idea" type="application/atom+xml">
-<meta name="theme-color" content="#5badf0">
-<title>Archives: 2022/3 - Idea</title>
-<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<link rel="shortcut icon" href="/Idea/favicon.png">
 
-<link rel="stylesheet" href="/Idea/css/style.css">
+<title>Archiv: 2022/3 | Idea</title>
 
-<nav class="main-nav">
-	
-	    <a href="/Idea/">← Home</a>
-	
-	
-	    <a href="/Idea/about/">About</a>
-	
-	    <a href="/Idea/archives/">Archives</a>
-	
-	<a class="cta" href="/atom.xml" data-no-instant>Subscribe</a>
-</nav>
 
-<section id="wrapper">
-    
 
-<div class="profile">
-	<section id="wrapper">
-		<header id="header">
-        	<a target="_blank" rel="noopener" href="https://github.com/rcy1314/Idea">
-        	    <img id="avatar" class="2x" src="https://cdn.staticaly.com/gh/rcy1314/tuchuang@main/NV/下载-(6).5room1dxwa80.jpg">
-        	</a>
-        	<h1>Idea</h1>
-        	
-        		<h2>随记</h2>
-        	
-		</header>
-	</section>
-</div>
-<span class="archive-page-counter">
-    
-    2 posts in total.
-</span>
-    
+<link rel="icon" href="/Idea/favicon.png">
+
+
+
+<link rel="stylesheet" href="/Idea/css/main.css">
+
+
+<link rel="stylesheet" href="/Idea/lib/nprogress/nprogress.css">
+
+
+<link rel="stylesheet" href="/Idea/lib/fancybox/fancybox.min.css">
+
+
+<link rel="stylesheet" href="/Idea/lib/tocbot/tocbot.min.css">
+
+
+
+<script src="/Idea/lib/jquery.min.js"></script>
+
+
+<script src="/Idea/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography,line-clamp"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+  }
+</script>
+
+
+<script src="/Idea/lib/nprogress/nprogress.js"></script>
+
+<script>
+  $(document).ready(() => {
+    NProgress.configure({
+      showSpinner: false,
+    });
+    NProgress.start();
+    $("#nprogress .bar").css({
+      background: "#de7441",
+    });
+    $("#nprogress .peg").css({
+      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
+    });
+    $("#nprogress .spinner-icon").css({
+      "border-top-color": "#de7441",
+      "border-left-color": "#de7441",
+    });
+    setTimeout(function () {
+      NProgress.done();
+      $(".fade").removeClass("out");
+    }, 800);
+  });
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+  })();
+  window.onload = function () {
+    // init iconify icon
+    const isDark = document.documentElement.classList.contains("dark");
+    if (isDark) {
+      $("#toggle-dark").attr("icon", "ri:moon-line");
+    } else {
+      $("#toggle-dark").attr("icon", "ri:sun-line");
+    }
+
+    const toggleDark = () => {
+      console.log("toggle dark");
+      const darkMode = document.documentElement.classList.toggle("dark");
+      localStorage.setItem("hexo-color-scheme", darkMode ? "dark" : "light");
+      $("#toggle-dark").attr("icon", darkMode ? "ri:moon-line" : "ri:sun-line");
+    };
+
+    $("#toggle-dark").click(toggleDark);
+  };
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/Idea/blread/atom.xml" title="Idea" type="application/atom+xml">
+</head>
+<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200">
+  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <nav class="flex items-center text-base">
+      <a href="/Idea/" class="group">
+        <h2 class="font-medium tracking-tighterp text-l p-2">
+          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" src="/images/logo.jpg" alt="Idea" />
+          Idea
+        </h2>
+      </a>
+      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        我的个人书写工作流
+      </div>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
         
         
-            
-            
-    		<div class="archive" id="archive">
-            	<h3 class="archive-title">2022</h3>
-            	<ul>
+          
         
-        <div class="post-item">
-    <div class="post-time">Mar 11</div>
-    <a href="/Idea/2022/03/11/15605765/" class="post-link">我的个人书写工作流</a>
-</div>
-    
-        
-        
-        <div class="post-item">
-    <div class="post-time">Mar 10</div>
-    <a href="/Idea/2022/03/10/15605153/" class="post-link">创造未来的自动化集成工作流</a>
-</div>
-    
+        <a class="w-5 h-5" title="toggle theme">
+          <iconify-icon width="20" icon="ri:sun-line" id="toggle-dark"></iconify-icon>
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
+        </span>
+        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
+        </span>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      
     </ul>
-    </div>
-<div class="archive" id="tagcloud">
-	<h3 class="archive-title">Tagcloud</h3>
-	<ul class="ct-list">
-		
-    		<a href="/Idea/tags/日常/#日常" title="日常">日常<span>2</span></a>
-    	
-    </ul>
+  </div>
+  <div class="mask bg-black/20 absolute inset-0"></div>
 </div>
-<div class="archive" id="category">
-	<h3 class="archive-title">Category</h3>
-	<ul class="ct-list">
-		
-    	</div>
-    </ul>
-</div>
-	<footer id="footer">
-	<div id="social">
-		<p class="small">© Copyright 2022
-			<a href="/Idea/"> NOISE </a>/
-			<a target="_blank" rel="noopener" href="https://hexo.io"> Hexo </a>/
-			<a target="_blank" rel="noopener" href="https://github.com/caisiduo/hexo-theme-lightime"> Lightime</a>
-		</p>
-	</div>
-</footer>
+
+  <main class="p-12">
+    <section class="px-6 max-w-prose mx-auto gap-12 grid grid-cols-1">
+  <div class="flex flex-col h-48 items-center justify-center">
+    <h1 class="site-title text-4xl leading-relaxed">
+      Idea
+    </h1>
+    <p class="text-gray-500 mt-2">
+      NOISE随记
+    </p>
+  </div>
+  
+  
+    
+    
+      <div class="relative pointer-events-none">
+        <span class="text-9xl opacity-10 absolute -left-11 -top-6 font-bold">2022</span>
+      </div>
+    
+    <a href="/Idea/2022/03/11/15605765/">
+      <header>
+        <h2 class="font-bold text-xl">
+          我的个人书写工作流
+        </h2>
+      </header>
+      <section class="text-gray-400 my-1 text-sm time">
+        <p class="line-clamp-4">
+          
+            &lt;meta name=&#34;referrer&#34; content=&#34;no-referrer&#34; /&gt;
+          
+        </p>
+        <p class="line-clamp-4">
+          Mar 11
+          ·
+          1 min
+        </p>
+      </section>
+    </a>
+  
+    
+    
+    <a href="/Idea/2022/03/10/15605153/">
+      <header>
+        <h2 class="font-bold text-xl">
+          创造未来的自动化集成工作流
+        </h2>
+      </header>
+      <section class="text-gray-400 my-1 text-sm time">
+        <p class="line-clamp-4">
+          
+            &lt;meta name=&#34;referrer&#34; content=&#34;no-referrer&#34; /&gt;
+          
+        </p>
+        <p class="line-clamp-4">
+          Mar 10
+          ·
+          1 min
+        </p>
+      </section>
+    </a>
+  
 </section>
 
-	<script src="//cdnjs.loli.net/ajax/libs/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
-	<script data-no-instant>
-		
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-XXXXXXXX-Y', 'auto');
-			ga('send', 'pageview');
-  			InstantClick.on('change', function() {
-  				ga('send', 'pageview', location.pathname + location.search);
-			});
-		
-		InstantClick.init('mousedown');
-	</script>
+  </main>
+  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Busuanzi Analytics -->
+<div class="flex items-center gap-2">
+  <span>Visitor Count</span>
+  <span id="busuanzi_value_site_uv"></span>
+  <span>Totalview</span>
+  <span id="busuanzi_value_site_pv"></span>
+</div>
+<!-- End Busuanzi Analytics -->
+
+
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <span>© 2022</span>
+    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
+  </div>
+
+</footer>
+
+  <iconify-icon class="fixed right-4 bottom-10 z-100 opacity-0" width="24" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+  
+<script src="/Idea/lib/clipboard.min.js"></script>
 
 
 
+<script src="/Idea/js/main.js"></script>
 
-	<script>
-		// To make images retina, add a class "2x" to the img element
-		var isMobile = {
-			Android:function() {
-				return navigator.userAgent.match(/Android/i) ? true : false;
-			},
-			BlackBerry:function(){
-				return navigator.userAgent.match(/BlackBerry/i) ? true : false;
-			},
-			iOS:function(){
-				return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
-			},
-			Windows:function(){
-				return navigator.userAgent.match(/IEMobile/i) ? true : false;
-			},
-			any:function(){
-			   return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
-			}
-		};
-		if (isMobile.any()) {
-			var suffix = document.getElementsByClassName('2x')[0].getAttribute('src');
-			suffix = suffix.replace('.png','@2x.png');
-			suffix = suffix.replace('.jpg','@2x.jpg');
-			document.getElementsByClassName('2x')[0].setAttribute('src',suffix);
-		};
-	</script>
-	
+
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  $(document).ready(() => {
+    const maraidConfig = {
+      theme: "dark",
+      logLevel: 3,
+      flowchart: { curve: "linear" },
+      gantt: { axisFormat: "%m/%d/%Y" },
+      sequence: { actorMargin: 50 },
+    };
+    mermaid.initialize(maraidConfig);
+  });
+</script>
+
+
+
+<script src="/Idea/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/Idea/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
+
+
+</body>
+
+</html>
