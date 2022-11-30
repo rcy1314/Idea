@@ -6,7 +6,7 @@
   <link href="https://rcy1314.github.io/Idea/feed.xml" rel="self"/>
   
   <link href="https://rcy1314.github.io/Idea/"/>
-  <updated>2022-11-30T10:34:55.808Z</updated>
+  <updated>2022-11-30T10:37:25.801Z</updated>
   <id>https://rcy1314.github.io/Idea/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://rcy1314.github.io/Idea/2022/03/11/15605765/"/>
     <id>https://rcy1314.github.io/Idea/2022/03/11/15605765/</id>
     <published>2022-03-10T16:00:00.000Z</published>
-    <updated>2022-11-30T10:34:55.808Z</updated>
+    <updated>2022-11-30T10:37:25.801Z</updated>
     
     <content type="html"><![CDATA[<meta name="referrer" content="no-referrer" /><span id="more"></span><p>目前我的个人工作流还在完善中，不过经过一段时间后体验已经不错了。  </p><p><img src="//i0.hdslb.com/bfs/article/f7f44f9a96291a09c86fb29e541d2f0eac0ebc5c.jpg" alt="图片"></p><p>一、以rss为媒介<br>模式：长毛象-tg-twitter-notion<br>二、以webhook为媒介<br>模式：社区网站-slack<br>三、以api为媒介<br>模式：notion-slack<br>四、外部分享及剪藏<br>外部【浏览器插件、快接指令】-notion  </p><p><img src="//i0.hdslb.com/bfs/article/d8c43ce6e51c7fd3ae969530cb2daa6d49a9cbad.jpg" alt="图片"></p><p>总结：Notio适合all in one，所以能接收和容纳更多，而通过一中，长毛象不需要翻墙，所以可以直接同步到tg或twitter<br>，不过由于我使用的长毛象的rss只有输出文字，后续还需要解决。  </p><p><img src="//i0.hdslb.com/bfs/article/24d421410f6258828ceafcbf2f49acdf899aef8c.jpg" alt="图片"></p><p>notion就是太牛了，几乎我能想到的集成和展现形式都能做到，这可是模仿者们做不来的，为此，我也做了一个all about<br>notion的页面，来向你展示有关notion开源及第三方能做到的事。  </p><p><img src="//i0.hdslb.com/bfs/article/41e111f81bc14ac883b246442385ee1acf831a4d.jpg" alt="图片"></p><p>浏览器插件推荐<a href="https://chrome.google.com/webstore/detail/ldmmifpegigmeammaeckplhnjbbpccmm">https://chrome.google.com/webstore/detail/ldmmifpegigmeammaeckplhnjbbpccmm</a><br>如果你用手机做收藏数据库，则可以直接分享给notion，简直不要太方便，在使用手机的时你也可以直接调用浏览器分享给NOTION客户端<br>其它的因为输出原因还在调整，会再进一步优化，欢迎访问各个站点</p><blockquote><p>本文使用 <a href="https://www.bilibili.com/read/cv10352009">文章同步助手</a> 同步</p></blockquote>]]></content>
     
@@ -40,7 +40,7 @@
     <link href="https://rcy1314.github.io/Idea/2022/03/10/15605153/"/>
     <id>https://rcy1314.github.io/Idea/2022/03/10/15605153/</id>
     <published>2022-03-10T15:02:00.000Z</published>
-    <updated>2022-11-30T10:34:56.376Z</updated>
+    <updated>2022-11-30T10:37:26.373Z</updated>
     
     <content type="html"><![CDATA[<meta name="referrer" content="no-referrer" /><span id="more"></span><p>自动化这个概念是我从接触到Notion时意识到的，如今再看，它变得更丰富和个性化了。</p><h1 id="ALL-In-Notion"><a href="#ALL-In-Notion" class="headerlink" title="ALL In Notion"></a><strong>ALL In Notion</strong></h1><p>先来看下Notion，它不仅是一个笔记系统，也是自动化的一部分，利用它，我能：</p><p>一、Notion数据库发布到TG频道</p><p><img src="//i0.hdslb.com/bfs/article/7d90a34c45af70a644475271efa446ee949c8585.jpg" alt="图片"></p><p>进一步扩展，则Notion数据库更新到TG频道并输出RSS</p><p>二、TG频道发布到Twitter文章再发布到Notion页面</p><p><img src="//i0.hdslb.com/bfs/article/7a73df9942f1de79e512042a09d42d250060fcd9.jpg" alt="图片"></p><p>进一步扩展，则微博发送字段到TG频道再到Twitter再到Notion</p><p>三、Notion页面更新动态发送到slack频道</p><p><img src="//i0.hdslb.com/bfs/article/4de1a9e0c4f147887fd927d5a4e7e056e992f5fe.jpg" alt="图片"></p><p>进一步扩展，则Notion更新到Slack再发送字段到其它频道或发布到discord</p><p>四、插件等外部分享到Notion数据库再发布到TG频道</p><p><img src="//i0.hdslb.com/bfs/article/998d30f096cdaff118f45bc3df31ccc71e848c69.jpg" alt="图片"></p><p>五、RSS自动输出到Notion页面</p><p><img src="//i0.hdslb.com/bfs/article/4a951113890340a24a2b85fa303bfb43bd423587.jpg" alt="图片"></p><p>不难想象，这些如今都可以轻松做到，甚至，我可以拿Notion单独渲染为一个博客CMS网站，真正实现了ALL In Notion的理念</p><p><img src="//i0.hdslb.com/bfs/article/fb33392fa0093f08e042914acb1e9815a16ef7ef.jpg" alt="图片"></p><h1 id="集成化平台"><a href="#集成化平台" class="headerlink" title="集成化平台"></a>集成化平台</h1><p>这里列举两个个比较有名的</p><p>一、Iftt</p><p><img src="//i0.hdslb.com/bfs/article/2650cd849b5d5cf1cf7d7722e39594a7daf56cf3.jpg" alt="图片"></p><p>它支持创建五个免费的集成，活动量不限，尽管输出慢和输出字段不友好，但作为免费使用的平台就不要太挑剔了，要求高的可以自行付费支持。</p><p>二、(integromat.com)</p><p><img src="//i0.hdslb.com/bfs/article/5e78c8bf3bd18b53999e24ef02551f00fbab4453.jpg" alt="图片"></p><p>每月1000 数据100M，支持两个集成方案，对比iftt，输出质量高很多</p><p>总结</p><p>透过以上列举到的你还可以本地化部署集成，也可以做自己的自动化工作流</p><p>自动化集成会慢慢成为创作者必不可少的一部分，在之后我也会在我的网站、频道等进一步扩展更多，欢迎访问和了解它们。</p><blockquote><p>本文使用 <a href="https://www.bilibili.com/read/cv10352009">文章同步助手</a> 同步</p></blockquote>]]></content>
     
