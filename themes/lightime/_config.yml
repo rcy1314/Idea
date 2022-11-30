@@ -1,21 +1,25 @@
 menu: #TITLE: link
-  About: about/
-  Archives: archives/
+
+  归档: archives/
+  主页: https://noisework.cn
 
 profile_link: https://github.com/rcy1314/Idea
 avatar: https://cdn.staticaly.com/gh/rcy1314/tuchuang@main/NV/下载-(6).5room1dxwa80.jpg
 favicon: https://cdn.staticaly.com/gh/rcy1314/tuchuang@main/NV/下载-(6).5room1dxwa80.jpg
-gitment:
-  username:
-  repo:
-  id:
-  secret:
 
+# giscus
+giscus:
+  enable: 1
+  repo: rcy1314/Idea
+  repo_id: R_kgDOIhgfQA
+  category: General
+  category_id: DIC_kwDOIhgfQM4CS1EL
+  mapping: pathname
 theme_color: 5badf0
 
 disqus_shortname:
 
-google_analytics: UA-XXXXXXXX-Y
+google_analytics: 
 
 twitter:
 

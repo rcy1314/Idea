@@ -116,14 +116,15 @@ hide_posts:
   # 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录
   noindex: true
 
-#RSS订阅
-plugin:
-  - hexo-generator-feed
-#Feed Atom
 feed:
+  enable: true
   type: atom
-  path: blread/atom.xml
+  path: feed.xml
   limit: 20
+  content: true
+  order_by: -date
+  autodiscovery: true
+
 # giscus
 giscus:
   enable: 1
