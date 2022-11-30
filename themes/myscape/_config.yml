@@ -6,11 +6,8 @@ menu:
   归档: /archives
   关于: /about
   友情链接: /friends
-rss: /atom.xml
-local_search:
-  enable: true
-  path: /~liuly0322/blog/search.xml
-banner: "images/banner.jpg"
+
+
 
 # Content
 article_info: true
@@ -35,16 +32,16 @@ show_count: true
 recent_posts_limits: 5
 
 # Miscellaneous
-favicon: /favicon.png
-twitter:
+favicon: https://cdn.staticaly.com/gh/rcy1314/tuchuang@main/NV/favicon.5m81u62g99g0.jpg
+twitter: liangwenhao3
 fb_admins:
 fb_app_id:
 
 # valine comment system. https://valine.js.org
 valine:
-  enable: true # if you want use valine,please set this value is true
-  appId:  3W5Qm2qp5R7YCTWKTX9EeTph-gzGzoHsz
-  appKey:  432mXjcNbVpYnasmPQ5QNiJC
+  enable: false # if you want use valine,please set this value is true
+  appId:  
+  appKey:  
   pageSize: 10 # comment list page size
   avatar: robohash # gravatar style https://valine.js.org/#/avatar
   placeholder: 快来留下评论吧～ # valine comment input placeholder(like: Please leave your footprints )
