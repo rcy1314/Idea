@@ -4354,21 +4354,15 @@ nav.menu a.nav-item:hover {
 @media screen and (min-width: 1400px) {
   .l_main {
     margin-left: calc(2 * var(--gap-l));
-    margin-right: calc(2 * var(--gap-l) + var(--width-left) / 2);
   }
 }
 @media screen and (min-width: 667px) {
   .l_main {
-    padding-top: calc(2 * var(--gap-l));
-  }
-}
-@media screen and (max-width: 667px) {
-  .l_main {
-    padding-top: 1rem;
+    padding-top: calc(1 * var(--gap-l));
   }
 }
 .l_main header {
-  margin: 2rem 1rem 1rem;
+  margin: 4rem 1rem 2rem;
 }
 .l_main header .logo-wrap {
   margin: 0;
