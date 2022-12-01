@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>制作任意页面嵌入RSS页并嵌入到其它</title>
+      <link href="/Idea/2022/12/02/20181789/"/>
+      <url>/Idea/2022/12/02/20181789/</url>
+      
+        <content type="html"><![CDATA[<meta name="referrer" content="no-referrer" /><span id="more"></span>  <p><img src="//i0.hdslb.com/bfs/article/2eda95e7f629f1bc7426dbc361f0c38996d6e6a9.jpg"></p><p><strong>一、由twilik所提供的用一个div和一个脚本标签来制作的可嵌入式rss</strong></p><p>官方：<a href="https://www.twilik.com/embed-your-medium-blog">https://www.twilik.com/embed-your-medium-blog</a></p><p>只需在希望RSS显示的任何位置放置一个带有选项的 div 标签作为属性，并在页面底部包含一个 javascript 文件即可</p><p>演示页面：<a href="https://www.twilik.com/medium-embed-demo">https://www.twilik.com/medium-embed-demo</a></p><p>例:1：<a href="https://codepen.io/chrisj74/pen/vvEppa">https://codepen.io/chrisj74/pen/vvEppa</a></p><p>例2：<a href="https://codepen.io/chrisj74/pen/yGypqO">https://codepen.io/chrisj74/pen/yGypqO</a></p><p>代码演示：</p><p>现在，你可以试着将它制作或单独托管或嵌入到如Markdown、Notion中去</p><p> <strong>二、使用p3k.org制作RSSBOX页面</strong>  </p><p>它是可定制化的，你可以在<a href="https://p3k.org/rss/">https://p3k.org/rss/</a> 中在线制作</p><p><img src="//i0.hdslb.com/bfs/article/b8ae248e8f14451610a868269ad1fe9789a447e0.png"></p><p>它提供了一种简单的方法，通过自动生成的JavaScript标签将此类RSS框嵌入任何有效的HTML文档中</p><p>只需输入任何兼容的RSS提要的URL，根据需要修改布局设置，然后按“重新加载”按钮即可完成</p><p>示例：RSS订阅组件 (noisework.cn&#x2F;widgets&#x2F;rss&#x2F;index.html)</p><p>同样你可使用它来嵌入到其它页面中  </p><p>以上就是两种完全免费快速嵌入的方法，找到我： <strong><a href="http://www.noisework.cn/">www.noisework.cn</a></strong></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我的个人书写工作流</title>
       <link href="/Idea/2022/03/11/15605765/"/>
       <url>/Idea/2022/03/11/15605765/</url>
