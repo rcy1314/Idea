@@ -18,7 +18,8 @@ sidebar:
   logo:
     avatar: 'https://cdn.staticaly.com/gh/rcy1314/tuchuang@main/NV/favicon.5m81u62g99g0.jpg' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
     title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
-    favicon: https://cdn.staticaly.com/gh/rcy1314/tuchuang@main/NV/favicon.5m81u62g99g0.jpg
+    favicon: 'https://cdn.staticaly.com/gh/rcy1314/tuchuang@main/NV/favicon.5m81u62g99g0.jpg'
+    icon: '<img src="https://cdn.staticaly.com/gh/rcy1314/tuchuang@main/NV/favicon.5m81u62g99g0.jpg"/>'
   menu:
      post: '[主页](/)'
      sites: '[收藏](/collect/)'
