@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>为你的云服务器和网站免费建立监控页</title>
+      <link href="/Idea/2022/12/03/20223016/"/>
+      <url>/Idea/2022/12/03/20223016/</url>
+      
+        <content type="html"><![CDATA[<meta name="referrer" content="no-referrer" /><span id="more"></span><p>我相信有在使用云服务器或自己搭建过网站的朋友都有这个需求，有两个值得推荐的监控服务站可供你参考</p><p>一、UPPtime</p><p>官方：<a href="https://upptime.js.org/">https://upptime.js.org</a></p><p><img src="//i0.hdslb.com/bfs/article/5ff80f4270ac0941bf00607761707a4a2e52bd3a.png"></p><p>这是一个托管在Github上支持的开源正常运行时间监视器和状态页面的服务，支持端口检测</p><p>我的示例：<a href="https://rcy1314.github.io/runtime">https://rcy1314.github.io/runtime</a></p><p><img src="//i0.hdslb.com/bfs/article/465fd7e1215ecc5ef7656cb7f500ec31316dada6.png"></p><p>使用 GitHub Action，用户可以让工作流每 x 分钟自动运行一次。最短间隔为 5 分钟。因此，每隔 5 分钟，Upptime<br>就会访问您的网站并确保它们已启动，并且它还会额外保留一份可查看的历史文件</p><p>配置比较简单，直接fork或按官方模版新建在自己的仓库里，按自己的需求改写配置文件，启动action，并将github pages设置为 gh-pages</p><p><img src="//i0.hdslb.com/bfs/article/22a0e255d9d6528101c8b8aeef35741a58278e36.png"></p><p>稍等即可查看你的监控页面。  </p><p>二、uptimerobot</p><p>官方：<a href="https://uptimerobot.com/">https://uptimerobot.com</a></p><p><img src="//i0.hdslb.com/bfs/article/cee0d14946f02509a620683a05f4adf2a58e71f5.png"><img src="//i0.hdslb.com/bfs/article/44b936b39c0ebb604aa7e1cab65a95e7d4f325ad.png"></p><p><img src="//i0.hdslb.com/bfs/article/7e0eadddf50082a3c7fa2ec6cba721f1b10ff5ff.png" alt="图片"></p><p>这是一个自带通知推送、关键词检测、Corn作业的强大监控服务平台，支持APP【IOS\安卓】登录查看，免费用户支持添加监控50台服务设备，你可以自己开启官方提供的状态页面，我的示例：<a href="https://stats.uptimerobot.com/GoqwLuBl3o">https://stats.uptimerobot.com/GoqwLuBl3o</a></p><p><img src="//i0.hdslb.com/bfs/article/102698ad741a08bb290eaf9bcf97cd46201821dd.png"></p><p>邮箱注册后进入控制后台按自己需求添加服务即可，在控制台右侧有开启状态页的选项，可自定义配置LOGO</p><p>服务监控平台及自定义配置的方法不是只有这两个还包括PHP探针一类的，但总的来说，这两个是绝对值得你去尝试的。</p><p>找到我：<a href="http://www.noisework.cn/">www.noisework.cn</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日常 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>制作任意页面嵌入RSS页并嵌入到其它</title>
       <link href="/Idea/2022/12/02/20181789/"/>
       <url>/Idea/2022/12/02/20181789/</url>
